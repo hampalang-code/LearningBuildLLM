@@ -1,0 +1,12 @@
+[tools]
+uv = "latest"
+
+[tasks.init]
+description = " Initialize the project by installing dependencies and setting up the environment."
+depends = ["install", "uv"]
+
+[tasks.install]
+run = "mise install"
+
+[tasks.uv]
+run = "uv sync"
